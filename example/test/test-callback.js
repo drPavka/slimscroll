@@ -2218,8 +2218,8 @@ var slimscroll = function(options,elementsArray){
 			if( classie.hasClass(me.parentNode,o.wrapperClass) ){
 				// start from last bar position
 				var offset = me.scrollTop;
-				bar = me.parentNode.querSelector('.' + o.barClass),// find bar and rail,
-				rail = me.parentNode.querSelector('.' + o.railClass);
+				bar = me.parentNode.querySelector('.' + o.barClass),// find bar and rail,
+				rail = me.parentNode.querySelector('.' + o.railClass);
 
 				getBarHeight();
 
@@ -2346,7 +2346,7 @@ var slimscroll = function(options,elementsArray){
 		}
 		else if (o.start !== 'top'){
 			// assume jQuery selector
-			scrollContent( domhelper.getPosition(document.querSelector(o.start).top, null, true));
+			scrollContent( domhelper.getPosition(document.querySelector(o.start).top, null, true));
 
 			// make sure bar stays hidden
 			if (!o.alwaysVisible) {
